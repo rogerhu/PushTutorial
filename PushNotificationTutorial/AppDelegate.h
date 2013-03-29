@@ -2,8 +2,9 @@
 //  Copyright (c) 2012 Parse. All rights reserved.
 
 #import <UIKit/UIKit.h>
+#import "ViewController.h"
 
-@class ViewController;
+@class AppDelegate;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
