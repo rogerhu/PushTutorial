@@ -1,4 +1,5 @@
 //
+//  Copyright (c) 2013 Parse. All rights reserved.
 
 #import "ViewController.h"
 #import <Parse/Parse.h>
@@ -29,16 +30,15 @@
 }
 
 - (IBAction)updateInstallation:(id)sender {
-    NSLog(@"updateInstallation");
     NSString *gender = @"male";
     if (self.genderControl.selectedSegmentIndex == 1) {
         gender = @"female";
     }
-    NSNumber *age = [NSNumber numberWithInt:(int)self.ageControl.value];
-    PFInstallation *install = [PFInstallation currentInstallation];
-    [install setObject:age forKey:@"age"];
-    [install setObject:gender forKey:@"gender"];
-    [install saveInBackground];
+
+    NSNumber *age = @((int)self.ageControl.value);
+    [PFInstallation currentInstallation][@"age"] = age;
+    [PFInstallation currentInstallation][@"gender"] = gender;
+    [[PFInstallation currentInstallation] saveInBackground];
 }
 
 - (IBAction)updateAgeLabel:(id)sender {
@@ -48,15 +48,13 @@
 }
 
 - (void)loadInstallData {
-    NSLog(@"loadInstallData");
-    PFInstallation *install = [PFInstallation currentInstallation];
-    NSNumber *age = [install objectForKey:@"age"];
-    NSString *gender = [install objectForKey:@"gender"];
+    NSNumber *age = [PFInstallation currentInstallation][@"age"];
+    NSString *gender = [PFInstallation currentInstallation][@"gender"];
 
     // Handle saved age, or populate default age.
     if (!age) {
-        age = [NSNumber numberWithInt:35];
-        [install setObject:age forKey:@"age"];
+        age = @(35);
+        [PFInstallation currentInstallation][@"age"] = age;
     }
     self.ageLabel.text = [NSString stringWithFormat:@"%@", age];
     self.ageControl.value = [age floatValue];
@@ -68,11 +66,10 @@
         self.genderControl.selectedSegmentIndex = 1;
     } else {
         self.genderControl.selectedSegmentIndex = 0;
-        [install setObject:@"male" forKey:@"gender"];
+        [PFInstallation currentInstallation][@"gender"] = @"male";
     }
     
-    [install saveInBackground];
-    
+    [[PFInstallation currentInstallation] saveInBackground];
 }
 
 @end

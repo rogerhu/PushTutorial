@@ -1,4 +1,5 @@
 //
+//  Copyright (c) 2013 Parse. All rights reserved.
 
 #import "AppDelegate.h"
 #import "ViewController.h"
@@ -17,7 +18,14 @@
     // ****************************************************************************
     
     // Override point for customization after application launch.
-    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound];
+
+    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                    UIUserNotificationTypeBadge |
+                                                    UIUserNotificationTypeSound);
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                             categories:nil];
+    [application registerUserNotificationSettings:settings];
+    [application registerForRemoteNotifications];
     
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
@@ -44,6 +52,5 @@
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
     [PFPush handlePush:userInfo];
 }
-
 
 @end

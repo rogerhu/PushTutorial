@@ -30,6 +30,8 @@
 		D4F41A0114D9152D00D02120 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F419FA14D9152D00D02120 /* Security.framework */; };
 		D4F41A0214D9152D00D02120 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F419FB14D9152D00D02120 /* SystemConfiguration.framework */; };
 		D4F41A0414D9154500D02120 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F41A0314D9154500D02120 /* Parse.framework */; };
+		E762021519CCF83500D726F2 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E762021319CCF83500D726F2 /* Bolts.framework */; };
+		E762021619CCF83500D726F2 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E762021419CCF83500D726F2 /* ParseFacebookUtils.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		D4F419FA14D9152D00D02120 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D4F419FB14D9152D00D02120 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D4F41A0314D9154500D02120 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		E762021319CCF83500D726F2 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		E762021419CCF83500D726F2 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 				C44D5FA8161FA226007044A5 /* AdSupport.framework in Frameworks */,
 				C44D5FAB161FA226007044A5 /* Social.framework in Frameworks */,
 				C44D5FA9161FA226007044A5 /* libsqlite3.dylib in Frameworks */,
+				E762021619CCF83500D726F2 /* ParseFacebookUtils.framework in Frameworks */,
 				C44D5FAA161FA226007044A5 /* libz.dylib in Frameworks */,
 				C44D5FAC161FA226007044A5 /* StoreKit.framework in Frameworks */,
 				D4F419FC14D9152D00D02120 /* AudioToolbox.framework in Frameworks */,
@@ -83,6 +88,7 @@
 				D4F41A0214D9152D00D02120 /* SystemConfiguration.framework in Frameworks */,
 				D4F419D514D90FFB00D02120 /* UIKit.framework in Frameworks */,
 				D4F419D714D90FFB00D02120 /* Foundation.framework in Frameworks */,
+				E762021519CCF83500D726F2 /* Bolts.framework in Frameworks */,
 				D4F419D914D90FFB00D02120 /* CoreGraphics.framework in Frameworks */,
 				D4F41A0414D9154500D02120 /* Parse.framework in Frameworks */,
 			);
@@ -111,6 +117,8 @@
 		D4F419D314D90FFB00D02120 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E762021319CCF83500D726F2 /* Bolts.framework */,
+				E762021419CCF83500D726F2 /* ParseFacebookUtils.framework */,
 				6D10F48416DD714F00690A0F /* CoreLocation.framework */,
 				C44D5FA1161FA226007044A5 /* Accounts.framework */,
 				C44D5FA2161FA226007044A5 /* AdSupport.framework */,
@@ -306,11 +314,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PushNotificationTutorial/PushNotificationTutorial-Prefix.pch";
 				INFOPLIST_FILE = "PushNotificationTutorial/PushNotificationTutorial-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -325,11 +335,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PushNotificationTutorial/PushNotificationTutorial-Prefix.pch";
 				INFOPLIST_FILE = "PushNotificationTutorial/PushNotificationTutorial-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
