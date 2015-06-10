@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ParsePhonePushTutorial {
+namespace ParsePhonePushSample.Resources {
   using System;
 
 

@@ -6,10 +6,10 @@ using System.Windows.Markup;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using ParsePhonePushTutorial.Resources;
+using ParsePhonePushSample.Resources;
 using Parse;
 
-namespace ParsePhonePushTutorial {
+namespace ParsePhonePushSample {
   public partial class App : Application {
     /// <summary>
     /// Provides easy access to the root frame of the Phone Application.
@@ -23,17 +23,7 @@ namespace ParsePhonePushTutorial {
     public App() {
       // Initialize the Parse client with your Application ID and Windows Key found on
       // your Parse dashboard
-      // PARSE INTERNAL
-      // To properly scrub this project for public release, the following changes must be made:
-      // 1. This region should be replaced with a template Parse.Initialize call.
-      // 2. The project must stop requesting intranet permission.
-      // 3. The project must use ParsePushSample_TemporaryKey instead of a legitimate appstore key.
-      // 4. The project may not access Parse.snk, or it will retain access to Parse internals.
-      // 5. We must verify that Parse.snk is never copied to this project directory by msbuild.
-      //ParseClient.HostName = new Uri("http://parse-local:3000/");
-      //ParseClient.Initialize("LTqEUJiAxHa3QIpRE7q0I5weJmXQJJSC0aYNdZ4h", "windows_key2");
-      ParseClient.Initialize("wwwH0ol7jxitJCye1F73HuO6B1bJUJag0MqurA3p", "fGoBFyV5t6MwzulyQWgMRbJ6SCuE8biDuS9Z7kuA");
-      // END PARSE INTERNAL
+      ParseClient.Initialize("YOUR APPLICATION ID", "YOUR .NET KEY");
 
       this.Startup += (sender, args) => {
         ParseAnalytics.TrackAppOpens(RootFrame);

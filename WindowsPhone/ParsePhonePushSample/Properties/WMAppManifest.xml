@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US" />
-  <App xmlns="" ProductID="{9e2b70f0-0002-4e7f-8a66-130adafee29f}" Title="ParsePhonePushTutorial" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Parse" Description="Parse Windows Phone 8 Push tutorial" Publisher="ParsePhonePushTutorial" PublisherID="{60abd24b-686f-4fcf-ae1a-c87763528ca1}">
+  <App xmlns="" ProductID="{YOUR_PRODUCT_ID}" Title="ParsePhonePushSample" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="ParsePhonePushSample author" Description="Sample description" Publisher="ParsePhonePushSample" PublisherID="{YOUR_PUBLISHER_ID}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
@@ -15,12 +15,12 @@
       <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
     </Tasks>
     <Tokens>
-      <PrimaryToken TokenID="ParsePhonePushTutorialToken" TaskName="_default">
+      <PrimaryToken TokenID="ParsePhonePushSampleToken" TaskName="_default">
         <TemplateFlip>
           <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
           <Count>0</Count>
           <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
-          <Title>ParsePhonePushTutorial</Title>
+          <Title>ParsePhonePushSample</Title>
           <BackContent>
           </BackContent>
           <BackBackgroundImageURI>

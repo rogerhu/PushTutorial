@@ -1,6 +1,6 @@
-﻿using ParsePhonePushTutorial.Resources;
+﻿using ParsePhonePushSample.Resources;
 
-namespace ParsePhonePushTutorial {
+namespace ParsePhonePushSample {
   /// <summary>
   /// Provides access to string resources.
   /// </summary>

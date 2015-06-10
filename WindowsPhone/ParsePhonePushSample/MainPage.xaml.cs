@@ -7,11 +7,11 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using ParsePhonePushTutorial.Resources;
+using ParsePhonePushSample.Resources;
 using Parse;
 using Microsoft.Phone.Notification;
 
-namespace ParsePhonePushTutorial {
+namespace ParsePhonePushSample {
   public partial class MainPage : PhoneApplicationPage {
     // Constructor
     public MainPage() {
