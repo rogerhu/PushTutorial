@@ -1284,12 +1284,6 @@
             <param name="progress">The progress callback.</param>
             <param name="cancellationToken">The cancellation token.</param>
         </member>
-        <member name="F:Parse.ParseFile.MIMETypesDictionary">
-            <summary>
-            A list of file extensions to mime types as found here:
-            http://stackoverflow.com/questions/58510/using-net-how-can-you-find-the-mime-type-of-a-file-based-on-the-file-signature
-            </summary>
-        </member>
         <member name="P:Parse.ParseFile.IsDirty">
             <summary>
             Gets whether the file still needs to be saved.
@@ -1401,6 +1395,16 @@
             <summary>
             Mandatory MonoBehaviour for scenes that use Parse.  Set the application ID and .NET key
             in the editor.
+            </summary>
+        </member>
+        <member name="F:Parse.ParseInitializeBehaviour.applicationID">
+            <summary>
+            The Parse applicationId used in this app. You can get this value from the Parse website.
+            </summary>
+        </member>
+        <member name="F:Parse.ParseInitializeBehaviour.dotnetKey">
+            <summary>
+            The Parse dotnetKey used in this app. You can get this value from the Parse website.
             </summary>
         </member>
         <member name="M:Parse.ParseInitializeBehaviour.Awake">
@@ -1989,7 +1993,7 @@
             The runtime target of this application.
             </summary>
         </member>
-        <member name="M:Parse.ParseInstallation.getAppName">
+        <member name="M:Parse.ParseInstallation.getAppNameAsync">
             <summary>
             Gets the application name from <c>AndroidManifest.xml</c>.
             </summary>
@@ -2006,6 +2010,12 @@
             Gets the application version from <c>AndroidManifest.xml</c>.
             </summary>
             <returns>Application version.</returns>
+        </member>
+        <member name="M:Parse.ParseInstallation.getTimeZone">
+            <summary>
+            Gets current Timezone of the device.
+            </summary>
+            <returns>Current Timezone of the device.</returns>
         </member>
         <member name="M:Parse.ParseInstallation.SetDeviceTokenFromData(System.Byte[])">
             <summary>
@@ -2397,7 +2407,12 @@
         </member>
         <member name="P:Parse.ParsePushNotificationEventArgs.Payload">
             <summary>
-            The payload of the push notification.
+            The payload of the push notification as <c>IDictionary</c>.
+            </summary>
+        </member>
+        <member name="P:Parse.ParsePushNotificationEventArgs.StringPayload">
+            <summary>
+            The payload of the push notification as <c>string</c>.
             </summary>
         </member>
         <member name="T:Parse.ParseQuery`1">
@@ -3173,7 +3188,14 @@
             on the PlatformHooks class, these types will be AOT-compiled.
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Parse.PlatformHooks.GenerateWWWInstance(System.String,System.Byte[],System.Collections.Hashtable)" -->
+        <member name="M:Parse.PlatformHooks.GenerateWWWInstance(System.String,System.Byte[],System.Collections.Hashtable)">
+            <summary>
+            Unity changes its WWW constructor at 4.5.x from using <see cref="T:System.Collections.Hashtable"/> to using
+            <see cref="T:System.Collections.Generic.Dictionary`2"/>. We need to explicitly handle that. This method
+            generates a valid WWW instance depending on the newest WWW constructor
+            provided by used UnityEngine assembly
+            </summary>
+        </member>
         <member name="M:Parse.PlatformHooks.RegisterNetworkRequest(UnityEngine.WWW,System.Action{UnityEngine.WWW})">
             <summary>
             Registers a callback for network requests, running the callback on the main thread until
@@ -3201,6 +3223,11 @@
         <member name="M:Parse.PlatformHooks.RunDispatcher">
             <summary>
             Returns an enumerator (for use in a coroutine) that runs actions that have been dispatched.
+            </summary>
+        </member>
+        <member name="M:Parse.PlatformHooks.Initialize">
+            <summary>
+            Initialize the app. Called from <see cref="M:Parse.ParseClient.Initialize(System.String,System.String)"/>. Guaranteed to be run on main thread.
             </summary>
         </member>
         <member name="P:Parse.PlatformHooks.IsCompiledByIL2CPP">
@@ -3320,7 +3347,7 @@
         <member name="M:System.Threading.CancellationTokenSource.Cancel(System.Boolean)">
             <summary>
             Notifies consumers of the token that cancellation was requested.
-            If <paramref name="throwsOnFirstException"/> is true, any exception thrown by a
+            If <paramref name="throwOnFirstException"/> is true, any exception thrown by a
             handler of the cancellation request will cause processing of the cancellation
             to halt and the exception will propagate immediately to the caller.
             </summary>
@@ -3498,7 +3525,7 @@
         <member name="T:System.Threading.Tasks.TaskCompletionSource`1">
             <summary>
             Allows safe orchestration of a task's completion, preventing the consumer from prematurely
-            completing the task. Essentially, it represents the producer side of a <see cref="!:Task&lt;T&gt;"/>,
+            completing the task. Essentially, it represents the producer side of a <see cref="T:System.Threading.Tasks.Task`1"/>,
             providing access to the consumer side through the <see cref="P:System.Threading.Tasks.TaskCompletionSource`1.Task"/>
             while isolating the Task's completion mechanisms from the consumer.
             </summary>
