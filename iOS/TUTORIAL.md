@@ -28,7 +28,7 @@ If you already have an Explicit App ID for this app, proceed with Step 1.2. The 
 
 3. You will see a list of your App IDs. Select the + button to register a new App Id.
 
-<center><img src="Images/CertificatesNewAppId.png?raw=true" alt="Register new iOS App ID"/></center>
+  <center><img src="Images/CertificatesNewAppId.png?raw=true" alt="Register new iOS App ID"/></center>
 
 4. Enter a name for your new App ID under App ID Description.
 
@@ -36,11 +36,11 @@ If you already have an Explicit App ID for this app, proceed with Step 1.2. The 
 
 6. Under App ID Suffix, select Explicit App ID. Enter your iOS app's Bundle ID. This string should match the Bundle Identifier in your Xcode project configuration or Info.plist file.
 
-<center><img src="Images/ExplicitAppId.png?raw=true" alt="Explicit App ID"/></center>
+  <center><img src="Images/ExplicitAppId.png?raw=true" alt="Explicit App ID"/></center>
 
 7. Enable Push Notifications under App Services. You may also enable any other services that your app will need at this point.
 
-<center><img src="Images/AppServicesPush.png?raw=true" alt="Enable Push Notifications under App Services"/></center>
+  <center><img src="Images/AppServicesPush.png?raw=true" alt="Enable Push Notifications under App Services"/></center>
 
 8. Select "Continue" and make sure that all the values were entered correctly. Push Notifications should be enabled, and the Identifier field should match your app's Bundle Identifier (plus App ID Prefix). Select "Submit" to finalize the registration of your new App ID.
 
@@ -50,27 +50,27 @@ Now that you've created a new App ID (or chosen an existing Explicit App ID), it
 
 1. Select your newly created App ID from the list of App IDs, then select "Edit".
 
-<center><img src="Images/EditAppId.png?raw=true" alt="Select new App ID"/></center>
+  <center><img src="Images/EditAppId.png?raw=true" alt="Select new App ID"/></center>
 
 2. Scroll down to the Push Notifications section. Here you will be able to create both a Development SSL Certificate, as well as a Production SSL Certificate. Start by selecting "Create Certificate" under "Development SSL Certificate".
 
-<center><img src="Images/ConfigurePushNotifications.png?raw=true" alt="Create Certificate"/></center>
+  <center><img src="Images/ConfigurePushNotifications.png?raw=true" alt="Create Certificate"/></center>
 
 3. Follow the instructions in the next screen to create a Certificate Signing Request (CSR) using the Keychain Access utility on your Mac. This will be used to authenticate the creation of the Development SSL certificate.
 
-<center><img src="Images/KeychainAccessCertAssist.png?raw=true" alt="Certificate Signing Request"/></center>
+  <center><img src="Images/KeychainAccessCertAssist.png?raw=true" alt="Certificate Signing Request"/></center>
 
 4. Locate the CSR and upload it to Apple's servers, then click on "Generate". Once the certificate is ready, download the generated SSL certificate to your computer.
 
 5. Double click on the downloaded SSL certificate to add it to your *login* keychain.
 
-<center><img src="Images/AddCertificatesToKeychain.png?raw=true" alt="Add Certificate to Keychain"/></center>
+  <center><img src="Images/AddCertificatesToKeychain.png?raw=true" alt="Add Certificate to Keychain"/></center>
 
 6. Open the Keychain Access utility, and locate the certificate you just added under "My Certificates". It should be called "Apple Development <platform> Push Services: <YourBundleIdentifier>" if it is a development certificate, or "Apple Push Services: <YourBundleIdentifier>" if it is a production certificate.
 
 7. Right-click on it, select "Export", and save it as a .p12 file. You will be prompted to enter a password which will be used to protect the exported certificate. *Do not enter an export password when prompted!* Leave both fields blank and click OK. You will then be asked to enter your OS X account password to allow Keychain Access to export the certificate from your keychain on the next screen. Enter your OS X password and click on Allow.
 
-<center><img src="Images/ExportCertificate.png?raw=true" alt="Export P12 Certificate"/></center>
+  <center><img src="Images/ExportCertificate.png?raw=true" alt="Export P12 Certificate"/></center>
 
 If the Personal Information Exchange (.p12) option is grayed out in the export sheet, make sure "My Certificates" is selected in Keychain Access. If that does not help, double check that your certificate appears under the **login** keychain. You can drag and drop it into **login** if needed.
 
@@ -110,7 +110,7 @@ To use Push Notifications with Parse, you will need to enable this feature in yo
 
 2. Click on "Upload a file" under "Apple Push Certificates" and locate the .p12 certificate you exported from your Keychain earlier.
 
-<center><img src="Images/ParseConfig.png?raw=true" alt="Push Settings"/></center>
+  <center><img src="Images/ParseConfig.png?raw=true" alt="Push Settings"/></center>
 
 # 4. Configuring a Push Enabled Application
 
@@ -120,7 +120,7 @@ Start by configuring your Xcode application's project settings. We'll need to ma
 
 2. Modify the Bundle Identifier field under Identity to match your App ID's Bundle Identifier (ex. com.example.MyParsePushApp). Xcode may warn you at this point if you have not configured your provisioning profile correctly.
 
-<center><img src="Images/ConfigureXcodeProjectBundleIdentifier.png?raw=true" alt="Xcode configuration"/></center>
+  <center><img src="Images/ConfigureXcodeProjectBundleIdentifier.png?raw=true" alt="Xcode configuration"/></center>
 
 3. Click on "Capabilities", then turn on Push Notifications. Again, Xcode will let you know if there are any issues that require your attention.
 
@@ -278,7 +278,7 @@ Configure your app to use a Distribution provisioning profile. This will allow y
 
 2. Your App ID should now be configured for both Development and Distribution push notifications. Make sure to download the new Production SSL Certificate from the App ID Settings screen.
 
-<center><img src="Images/ConfiguredForProduction.png?raw=true" alt="Configured for Development and Distribution"/></center>
+  <center><img src="Images/ConfiguredForProduction.png?raw=true" alt="Configured for Development and Distribution"/></center>
 
 3. Double click on the downloaded SSL certificate to install it in your keychain. Right-click on it and export it as a .p12 file. Again, don't enter an export password when prompted.
 
