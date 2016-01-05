@@ -1,4 +1,14 @@
-# Setting up Push Notifications on iOS and OS X
+# Push Notification Sample App
+
+This Xcode project is a simple demonstration of using Push Notifications with Parse.
+
+## How to Run
+
+1. Clone the repository and open the Xcode project.
+2. Add your Parse application id and client key in `AppDelegate.m`
+3. Follow the tutorial below to create and set the appropriate provisioning profile and App ID.
+
+# Tutorial: Setting up Push Notifications on iOS and OS X
 
 Using push notifications is a great way to add real-time messaging to your application. It allows you to stay in touch with your users and makes it possible for your users to communicate with each other. This tutorial will guide you through all the necessary steps required to add this feature to your Parse application.
 
