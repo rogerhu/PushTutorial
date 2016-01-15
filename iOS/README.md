@@ -284,7 +284,7 @@ There are two types of distribution profiles: Ad Hoc, and App Store. You will ne
 
 Configure your app to use a Distribution provisioning profile. This will allow you to run the app in a configuration that most closely matches that of an app that has been downloaded from the App Store. We highly recommend testing your app in this manner. Doing so can save you the trouble of submitting an app to the App Store only to find out a week later (through user feedback!) that your push notifications are not getting delivered correctly.
 
-1. In Section 1.3., you configured your App ID for Push Notifications in Development. Retrace steps 1 through 7, but select "Production Push SSL Certificate" in step 2 instead.
+1. In Section 1.2., you configured your App ID for Push Notifications in Development. Retrace steps 1 through 7, but select "Production Push SSL Certificate" in step 2 instead.
 
 2. Your App ID should now be configured for both Development and Distribution push notifications. Make sure to download the new Production SSL Certificate from the App ID Settings screen.
 
