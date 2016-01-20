@@ -21,7 +21,6 @@
     // Uncomment and fill in with your Parse credentials:
     // [Parse setApplicationId:@"your_application_id" clientKey:@"your_client_key"];
     // ****************************************************************************
-
     
     // Override point for customization after application launch.
 
