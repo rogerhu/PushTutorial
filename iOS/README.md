@@ -4,9 +4,19 @@ This Xcode project is a simple demonstration of using Push Notifications with Pa
 
 ## How to Run
 
-1. Clone the repository and open the Xcode project.
-2. Add your Parse application id and client key in `AppDelegate.m`
-3. Follow the tutorial below to create and set the appropriate provisioning profile and App ID.
+This project uses CocoaPods to manage dependencies. You'll need to [install CocoaPods](https://cocoapods.org/#install) if you haven't yet.
+
+1. Clone the repository.
+2. Open a Terminal and navigate to the `PushTutorial/iOS` directory, then install the dependencies:
+
+    `pod install`
+    
+3. Open the PushNotificationTutorial workspace in Xcode:
+
+    `open PushNotificationTutorial.xcworkspace`
+
+4. Add your Parse application id and client key in `AppDelegate.m`
+5. Follow the tutorial below to create and set the appropriate provisioning profile and App ID.
 
 # Tutorial: Setting up Push Notifications on iOS and OS X
 
