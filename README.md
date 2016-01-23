@@ -1,7 +1,7 @@
-Push Notification Tutorial
-==========================
+Push Notification Tutorials
+===========================
 
-This project is a simple demonstration of using Push Notifications with Parse. We have provided a basic sample app for each of the following platforms:
+This repository is a simple demonstration of using Push Notifications with Parse. Select your target platform to learn more:
 
 * [Android](/Android)
 * [iOS and OS X](/iOS)
@@ -9,8 +9,3 @@ This project is a simple demonstration of using Push Notifications with Parse. W
 * [Windows](/Windows)
 * [Windows Phone](/WindowsPhone)
 * [Xamarin](/Xamarin)
-
-Learn More
-----------
-
-To learn more, take a look at the [Android Push Notifications tutorial](https://parse.com/tutorials/android-push-notifications) or the [iOS Push Notifications tutorial](/iOS).
