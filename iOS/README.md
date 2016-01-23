@@ -72,7 +72,7 @@ Now that you've created a new App ID (or chosen an existing Explicit App ID), it
 
 4. Locate the CSR and upload it to Apple's servers, then click on "Generate". Once the certificate is ready, download the generated SSL certificate to your computer.
 
-5. Double click on the downloaded SSL certificate to add it to your *login* keychain.
+5. Double click on the downloaded SSL certificate to add it to your **login** keychain.
 
   <center><img src="Images/AddCertificatesToKeychain.png?raw=true" alt="Add Certificate to Keychain"/></center>
 
@@ -110,7 +110,7 @@ Note that prior to submitting your app to the App Store, you will need to test p
 
 9. Download the generated provisioning profile from the next screen by selecting the "Download" button.
 
-10. Add the profile to your "login" keychain by double-clicking on the downloaded file.
+10. Add the profile to Xcode by double-clicking on the downloaded file.
 
 # 3. Configuring the Parse App
 
