@@ -54,7 +54,7 @@ If you already have an Explicit App ID for this app, proceed with Step 1.2. The 
 
 8. Select "Continue" and make sure that all the values were entered correctly. Push Notifications should be enabled, and the Identifier field should match your app's Bundle Identifier (plus App ID Prefix). Select "Submit" to finalize the registration of your new App ID.
 
-## 1.2. Configuring your App ID for Development Push Notifications
+## 1.2. Configuring your App ID for Push Notifications
 
 Now that you've created a new App ID (or chosen an existing Explicit App ID), it's time to configure the App ID for Push Notifications.
 
@@ -66,7 +66,7 @@ Now that you've created a new App ID (or chosen an existing Explicit App ID), it
 
   <center><img src="Images/ConfigurePushNotifications.png?raw=true" alt="Create Certificate"/></center>
 
-3. Follow the instructions in the next screen to create a Certificate Signing Request (CSR) using the Keychain Access utility on your Mac. This will be used to authenticate the creation of the Development SSL certificate.
+3. Follow the instructions in the next screen to create a Certificate Signing Request (CSR) using the Keychain Access utility on your Mac. This will be used to authenticate the creation of the SSL certificate.
 
   <center><img src="Images/KeychainAccessCertAssist.png?raw=true" alt="Certificate Signing Request"/></center>
 
@@ -84,7 +84,7 @@ Now that you've created a new App ID (or chosen an existing Explicit App ID), it
 
 If the Personal Information Exchange (.p12) option is grayed out in the export sheet, make sure "My Certificates" is selected in Keychain Access. If that does not help, double check that your certificate appears under the **login** keychain. You can drag and drop it into **login** if needed.
 
-Note that you've just enabled Push Notification for your app in development mode. Prior to releasing your application on the App Store, you will need to repeat steps 1 through 7 of this section, but select "Production Push SSL Certificate" in step 2 instead. You may reuse the CSR from step 3.
+You have just enabled Push Notification for your app in development mode. Prior to releasing your application on the App Store, you will need to repeat steps 1 through 7 of this section, but select "Production Push SSL Certificate" in step 2 instead. You may reuse the CSR from step 3.
 
 # 2. Creating the Development Provisioning Profile
 
