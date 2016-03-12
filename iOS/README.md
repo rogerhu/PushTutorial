@@ -158,12 +158,11 @@ To register the current device for push, call `UIApplication`'s `registerForRemo
 }
 ```
 ```swift
-// Swift
+// Swift 2
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
     {
     ...
-    let userNotificationTypes = UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound
-    let settings = UIUserNotificationSettings(forTypes: userNotificationTypes, categories: nil)
+    let settings = UIUserNotificationSettings(forTypes: UIUserNotificationType([.Alert, .Badge, .Sound]), categories: nil)    
     application.registerUserNotificationSettings(settings)
     application.registerForRemoteNotifications()
     ...
@@ -183,7 +182,7 @@ If the registration is successful, the callback method `application:didRegisterF
 }
 ```
 ```swift
-// Swift
+// Swift 2
 func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
     let installation = PFInstallation.currentInstallation()
     installation.setDeviceTokenFromData(deviceToken)
