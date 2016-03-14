@@ -66,7 +66,7 @@ Now that you've created a new App ID (or chosen an existing Explicit App ID), it
 
   <center><img src="Images/ConfigurePushNotifications.png?raw=true" alt="Create Certificate"/></center>
 
-3. Follow the instructions in the next screen to create a Certificate Signing Request (CSR) using the Keychain Access utility on your Mac. This will be used to authenticate the creation of the SSL certificate.
+3. Create a Certificate Signing Request (CSR) using the Keychain Access utility on your Mac according to the instructions in the next screen.   Open the Keychain Access utilty, select the "Keychain Access" menu option, choose "Certificate Assitant", and choose "Request a Certificate From a Certificate Authority".  This will be used to authenticate the creation of the SSL certificate.
 
   <center><img src="Images/KeychainAccessCertAssist.png?raw=true" alt="Certificate Signing Request"/></center>
 
